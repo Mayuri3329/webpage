@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevFlow | Modern Web</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+            color: white;
+        }
+
+        /* Navbar */
+        nav {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #a78bfa;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ddd;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #c4b5fd;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: calc(100vh - 70px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            animation: fadeUp 1s ease;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: rgba(167, 139, 250, 0.15);
+            border: 1px solid rgba(167, 139, 250, 0.4);
+            color: #c4b5fd;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 65px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #a78bfa;
+        }
+
+        .description {
+            font-size: 19px;
+            line-height: 1.7;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #8b5cf6;
+            color: white;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.35);
+        }
+
+        .primary:hover {
+            transform: translateY(-4px);
+            background: #7c3aed;
+        }
+
+        .secondary {
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .secondary:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        /* Cards */
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 220px;
+            padding: 25px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.12);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #c4b5fd;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            nav ul {
+                display: none;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Dev<span>Flow</span></div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🚀 Welcome to DevFlow
+            </div>
+
+            <h1>
+                Build. Deploy. <span>Innovate.</span>
+            </h1>
+
+            <p class="description">
+                A modern web experience created with HTML, CSS and JavaScript.
+                This project demonstrates a simple and beautiful frontend
+                ready for continuous integration and deployment with Jenkins.
+            </p>
+
+            <div class="buttons">
+                <a href="#" class="btn primary" onclick="showMessage()">
+                    Get Started →
+                </a>
+
+                <a href="#" class="btn secondary">
+                    Explore Project
+                </a>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>⚡ Fast</h3>
+                    <p>
+                        Lightweight and optimized for a smooth browsing experience.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🎨 Modern</h3>
+                    <p>
+                        Clean UI with glassmorphism, gradients and subtle animations.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🚀 Deploy</h3>
+                    <p>
+                        Easily integrate this project with GitHub and Jenkins.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        function showMessage() {
+            alert("🎉 Welcome to DevFlow! Your website is working successfully.");
+        }
+    </script>
+
+</body>
+</html>
